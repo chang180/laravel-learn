@@ -12,8 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', 'HomeController@index');
 Route::get('/form', 'HomeController@create');
 Route::get('/userform', 'HomeController@userform');
 Route::post('/save', 'HomeController@store');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
